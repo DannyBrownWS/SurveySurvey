@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="survey">
+      <h1 id="title">Land Surveying Experience Form</h1>
+      <p id="description">Please provide us with an accurate description of your land surveying experience. Note that we are currently only accepting data from those who have <b>at least 1 year of experience.</b></p>
+      <form id="survey-form" method="post">
+        <fieldset>
+          <label for="name" id="name-label">Enter your first and last name: <input id="name" name="name" type="text" placeholder="John Doe" required /></label>
+          <label for="email" id="email-label">Enter your email address: <input id="email" name="email" type="email" placeholder="johndoe@gmail.com" required /></label>
+          <label for="number" id="number-label">How many years have you been practicing land surveying? <input id="number" name="number" type="number" class="number" min="1" max="99" placeholder="1-99" required /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Have you ever held, or do you currently hold a Professional Land Surveyor License in the State of Maryland?</legend>
+          <label for="yes"><input id="yes" name="pls" value="yes" type="radio" checked /> Yes</label>
+          <label for="no"><input id="no" name="pls" value="no" type="radio" /> No</label>
+        </fieldset>
+        <fieldset>
+          <label for="dropdown">Complete the sentence: I have at least 1 year of experience working...
+            <select id="dropdown" name="surveyor-type">
+              <option value="">(select one)</option>
+              <option value="inside">inside</option>
+              <option value="outside">outside</option>
+              <option value="both">both inside and outside (1 year of each)</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Which of the following do you have experience in? (Select all that apply)</legend>
+          <label for="topography"><input type="checkbox" id="topography" name="survey-experience" value="topography" /> Topopgraphy</label>
+          <label for="stakeout"><input type="checkbox" id="stakeout" name="survey-experience" value="stakeout" /> Stakeout</label>
+          <label for="boundary"><input type="checkbox" id="boundary" name="survey-experience" value="boundary" /> Boundary</label>
+        </fieldset>
+        <fieldset>
+          <legend>Describe the major projects you have been involved in and what your role was.</legend>
+          <label for="major-projects"><textarea id="major-projects" name="major-projects" placeholder="Please list 3-5 projects."></textarea></label>
+        </fieldset>
+        <label for="submit"><input id="submit" type="submit" value="Submit" /></label>
+      </form>
+    </div>
+  </body>
+</html>
